@@ -1,0 +1,21 @@
+net.ipv4.ip_forward = 1
+default via 192.168.224.2 dev ens33 proto static metric 20100 
+192.168.224.0/24 dev ens33 proto kernel scope link src 192.168.224.10 metric 100 
+Chain PREROUTING (policy ACCEPT 119 packets, 19713 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain INPUT (policy ACCEPT 66 packets, 11549 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 2129 packets, 156K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain POSTROUTING (policy ACCEPT 829 packets, 62434 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 1498  111K ts-postrouting  0    --  *      *       0.0.0.0/0            0.0.0.0/0           
+ 1300 93219 MASQUERADE  0    --  *      ens33   0.0.0.0/0            0.0.0.0/0           
+    0     0 MASQUERADE  0    --  *      ens33   0.0.0.0/0            0.0.0.0/0           
+
+Chain ts-postrouting (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 MASQUERADE  0    --  *      *       0.0.0.0/0            0.0.0.0/0            mark match 0x40000/0xff0000
