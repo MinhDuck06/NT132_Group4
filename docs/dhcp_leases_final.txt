@@ -1,0 +1,39 @@
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.3-P1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+lease 192.168.224.100 {
+  starts 0 2026/04/12 18:09:06;
+  ends 0 2026/04/12 18:19:06;
+  tstp 0 2026/04/12 18:19:06;
+  cltt 0 2026/04/12 18:09:06;
+  binding state free;
+  hardware ethernet 00:0c:29:fe:7d:5a;
+  uid "\001\000\014)\376}Z";
+}
+server-duid "\000\001\000\0011o\276\242\000\014)\211^ ";
+
+lease 192.168.10.100 {
+  starts 1 2026/04/13 14:48:12;
+  ends 1 2026/04/13 14:58:12;
+  cltt 1 2026/04/13 14:48:12;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:fe:7d:5a;
+  uid "\001\000\014)\376}Z";
+  client-hostname "nt132-client-Ubuntu";
+}
+lease 192.168.10.100 {
+  starts 1 2026/04/13 14:53:57;
+  ends 1 2026/04/13 15:03:57;
+  cltt 1 2026/04/13 14:53:57;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:fe:7d:5a;
+  uid "\001\000\014)\376}Z";
+  client-hostname "nt132-client-Ubuntu";
+}
