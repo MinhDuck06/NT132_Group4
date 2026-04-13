@@ -1,0 +1,21 @@
+● isc-dhcp-server.service - ISC DHCP IPv4 server
+     Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-04-13 21:48:02 +07; 6min ago
+       Docs: man:dhcpd(8)
+   Main PID: 16643 (dhcpd)
+      Tasks: 1 (limit: 3410)
+     Memory: 3.9M (peak: 4.4M)
+        CPU: 23ms
+     CGroup: /system.slice/isc-dhcp-server.service
+             └─16643 dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf /etc/dhcp/dhcpd.conf ens33 ens37 ens38
+
+Apr 13 21:48:12 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPREQUEST for 192.168.10.100 (192.168.10.1) from 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:48:12 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPACK on 192.168.10.100 to 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: reuse_lease: lease age 89 (secs) under 25% threshold, reply with unaltered, existing lease for 192.168.10.100
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPDISCOVER from 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPOFFER on 192.168.10.100 to 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: reuse_lease: lease age 89 (secs) under 25% threshold, reply with unaltered, existing lease for 192.168.10.100
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPREQUEST for 192.168.10.100 (192.168.10.1) from 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:49:41 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPACK on 192.168.10.100 to 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:53:57 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPREQUEST for 192.168.10.100 from 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
+Apr 13 21:53:57 minhduc-VMware-Virtual-Platform dhcpd[16643]: DHCPACK on 192.168.10.100 to 00:0c:29:fe:7d:5a (nt132-client-Ubuntu) via ens37
