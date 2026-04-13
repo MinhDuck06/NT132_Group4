@@ -1,0 +1,21 @@
+---
+- name: Kich ban kiem tra he thong VLAN Nhóm 4
+  hosts: clients
+  become: yes
+  tasks:
+    - name: 1. Kiem tra ket noi den Client (Ping)
+      ansible.builtin.ping:
+
+    - name: 2. Kiem tra thong tin he dieu hanh
+      ansible.builtin.command: uname -a
+      register: os_info
+
+    - name: 3. Kiem tra kha nang ket noi Internet tu Client
+      ansible.builtin.shell: ping -c 3 8.8.8.8
+      register: internet_ping
+
+    - name: Hien thi ket qua kiem tra
+      ansible.builtin.debug:
+        msg:
+          - "He dieu hanh: {{ os_info.stdout }}"
+          - "Trang thai Internet: {{ 'THANH CONG' if internet_ping.rc == 0 else 'THAT BAI' }}"
