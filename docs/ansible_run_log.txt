@@ -1,0 +1,37 @@
+
+PLAY [Kich ban kiem tra he thong VLAN Nhóm 4] **********************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [client_1]
+ok: [client_2]
+
+TASK [1. Kiem tra ket noi den Client (Ping)] ***********************************
+ok: [client_1]
+ok: [client_2]
+
+TASK [2. Kiem tra thong tin he dieu hanh] **************************************
+changed: [client_1]
+changed: [client_2]
+
+TASK [3. Kiem tra kha nang ket noi Internet tu Client] *************************
+changed: [client_2]
+changed: [client_1]
+
+TASK [Hien thi ket qua kiem tra] ***********************************************
+ok: [client_1] => {
+    "msg": [
+        "He dieu hanh: Linux nt132-client-Ubuntu 6.17.0-14-generic #14~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jan 15 15:52:10 UTC 2 x86_64 x86_64 x86_64 GNU/Linux",
+        "Trang thai Internet: THANH CONG"
+    ]
+}
+ok: [client_2] => {
+    "msg": [
+        "He dieu hanh: Linux client-2-ubuntu 6.17.0-20-generic #20~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Mar 19 01:28:37 UTC 2 x86_64 x86_64 x86_64 GNU/Linux",
+        "Trang thai Internet: THANH CONG"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+client_1                   : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+client_2                   : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
