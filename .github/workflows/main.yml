@@ -1,12 +1,29 @@
-#!/bin/bash
-cd /opt/netdevops_project/NT132_Group4/
+name: CI/CD NetDevOps Nhóm 4
 
-# 1. Kéo code mới nhất từ GitHub
-git pull origin main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-# 2. Chạy Ansible để cấu hình Web và Network
-sudo ansible-playbook -i ansible/hosts ansible/deploy_web.yml
+jobs:
+  check-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-# 3. Chạy Python Test SSH và lưu Log
-source /home/minhduc/venv/bin/activate
-python3 python/test_ssh_router.py >> python/ssh_history.log
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Check Python Syntax
+        run: |
+          python3 -m py_compile python/test_ssh_router.py
+
+      - name: Check Ansible Syntax
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+          ansible-playbook ansible/deploy_web.yml --syntax-check
