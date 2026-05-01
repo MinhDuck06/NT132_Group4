@@ -1,0 +1,19 @@
+---
+- name: Triển khai Website ngay trên Server
+  hosts: webservers
+  become: yes
+  tasks:
+
+    - name: Copy file index.html vào thư mục Apache
+      copy:
+        src: /opt/netdevops_project/NT132_Group4/website/index.html
+        dest: /var/www/html/index.html
+        force: yes
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Khởi động lại Apache
+      service:
+        name: apache2
+        state: restarted
