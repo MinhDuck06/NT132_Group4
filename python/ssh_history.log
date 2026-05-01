@@ -6,3 +6,59 @@ ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64
 ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
 ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
 tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
+--- Đang kết nối SSH tới Gateway (192.168.224.10)... ---
+--- Kết nối thành công! Trạng thái các cổng Router: ---
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.224.10/24 fe80::20c:29ff:fe89:5e0c/64 
+ens37            UP             192.168.10.1/24 fe80::20c:29ff:fe89:5e16/64 
+ens38            UP             192.168.20.1/24 fe80::20c:29ff:fe89:5e20/64 
+tailscale0       UNKNOWN        100.71.221.123/32 fd7a:115c:a1e0::3734:dd7b/128 fe80::273e:6af2:7faf:b032/64 
