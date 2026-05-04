@@ -1,0 +1,33 @@
+---
+- name: Cai dat Node Exporter len toan bo he thong
+  hosts: clients
+  become: yes
+  tasks:
+    - name: 1. Tai Node Exporter ve Client
+      get_url:
+        url: https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
+        dest: /tmp/node_exporter.tar.gz
+
+    - name: 2. Giai nen file
+      unarchive:
+        src: /tmp/node_exporter.tar.gz
+        dest: /opt/
+        remote_src: yes
+
+    - name: 3. Tao Service de Node Exporter tu chay khi khoi dong
+      copy:
+        content: |
+          [Unit]
+          Description=Node Exporter
+          [Service]
+          ExecStart=/opt/node_exporter-1.7.0.linux-amd64/node_exporter
+          Restart=always
+          [Install]
+          WantedBy=multi-user.target
+        dest: /etc/systemd/system/node_exporter.service
+
+    - name: 4. Khoi chay dich vu
+      systemd:
+        name: node_exporter
+        state: started
+        enabled: yes

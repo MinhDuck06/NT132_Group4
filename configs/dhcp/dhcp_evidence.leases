@@ -1,0 +1,78 @@
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.3-P1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+lease 192.168.20.101 {
+  starts 1 2026/05/04 19:48:20;
+  ends 1 2026/05/04 19:58:20;
+  tstp 1 2026/05/04 19:58:20;
+  cltt 1 2026/05/04 19:48:20;
+  binding state free;
+  hardware ethernet 00:0c:29:b2:24:49;
+  uid "\001\000\014)\262$I";
+}
+lease 192.168.20.100 {
+  starts 1 2026/05/04 20:10:10;
+  ends 1 2026/05/04 20:20:10;
+  tstp 1 2026/05/04 20:20:10;
+  cltt 1 2026/05/04 20:10:10;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:78:93:26;
+  uid "\001\000\014)x\223&";
+  client-hostname "client-2-ubuntu";
+}
+lease 192.168.10.101 {
+  starts 1 2026/05/04 19:58:56;
+  ends 1 2026/05/04 20:08:56;
+  tstp 1 2026/05/04 20:08:56;
+  cltt 1 2026/05/04 19:58:56;
+  binding state free;
+  hardware ethernet 00:0c:29:b2:24:49;
+  uid "\001\000\014)\262$I";
+}
+lease 192.168.10.100 {
+  starts 1 2026/05/04 20:11:16;
+  ends 1 2026/05/04 20:21:16;
+  tstp 1 2026/05/04 20:21:16;
+  cltt 1 2026/05/04 20:11:16;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:fe:7d:5a;
+  uid "\001\000\014)\376}Z";
+  client-hostname "nt132-client-Ubuntu";
+}
+lease 192.168.224.100 {
+  starts 0 2026/04/12 18:09:06;
+  ends 0 2026/04/12 18:19:06;
+  tstp 0 2026/04/12 18:19:06;
+  cltt 0 2026/04/12 18:09:06;
+  binding state free;
+  hardware ethernet 00:0c:29:fe:7d:5a;
+  uid "\001\000\014)\376}Z";
+}
+lease 192.168.224.129 {
+  starts 1 2026/05/04 20:00:29;
+  ends 1 2026/05/04 20:10:29;
+  tstp 1 2026/05/04 20:10:29;
+  cltt 1 2026/05/04 20:00:29;
+  binding state free;
+  hardware ethernet 00:0c:29:b2:24:49;
+  uid "\001\000\014)\262$I";
+}
+lease 192.168.224.128 {
+  starts 1 2026/05/04 20:14:52;
+  ends 1 2026/05/04 20:24:52;
+  tstp 1 2026/05/04 20:24:52;
+  cltt 1 2026/05/04 20:14:52;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:89:5e:0c;
+  uid "\001\000\014)\211^\014";
+  client-hostname "minhduc-VMware-Virtual-Platform";
+}
