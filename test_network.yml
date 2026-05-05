@@ -6,16 +6,26 @@
     - name: 1. Kiem tra ket noi den Client (Ping)
       ansible.builtin.ping:
 
-    - name: 2. Kiem tra thong tin he dieu hanh
+    # Thêm cái này để show VLAN cho xịn
+    - name: 2. Lay dia chi IP cua may
+      ansible.builtin.shell: "hostname -I | awk '{print $1}'"
+      register: client_ip
+
+    - name: 3. Kiem tra thong tin he dieu hanh
       ansible.builtin.command: uname -a
       register: os_info
 
-    - name: 3. Kiem tra kha nang ket noi Internet tu Client
+    - name: 4. Kiem tra kha nang ket noi Internet tu Client
       ansible.builtin.shell: ping -c 3 8.8.8.8
       register: internet_ping
+      ignore_errors: yes # Đề phòng máy nào mất mạng Playbook không bị dừng giữa chừng
 
-    - name: Hien thi ket qua kiem tra
+    - name: 5. Hien thi ket qua kiem tra tong hop
       ansible.builtin.debug:
         msg:
+          - "------------------------------------------"
+          - "May: {{ inventory_hostname }}"
+          - "Dia chi IP (VLAN): {{ client_ip.stdout }}"
           - "He dieu hanh: {{ os_info.stdout }}"
-          - "Trang thai Internet: {{ 'THANH CONG' if internet_ping.rc == 0 else 'THAT BAI' }}"
+          - "Trang thai Internet: {{ 'THANH CONG (Co NAT)' if internet_ping.rc == 0 else 'THAT BAI (Mat ket noi)' }}"
+          - "------------------------------------------"

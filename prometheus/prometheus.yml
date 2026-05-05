@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s     # 15 giây lấy dữ liệu 1 lần
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'VLAN_Monitoring'
+    static_configs:
+      - targets: ['localhost:9100']       # Giám sát chính con Router
+      - targets: ['192.168.10.100:9100'] # Client 1 (VLAN 10)
+      - targets: ['192.168.10.102:9100'] # Client 3 (VLAN 10)
+      - targets: ['192.168.20.100:9100'] # Client 2 (VLAN 20)

@@ -1,14 +1,14 @@
 ---
-- name: Cai dat Node Exporter len toan bo he thong
+- name: Trien khai Node Exporter tu dong len Client
   hosts: clients
   become: yes
   tasks:
-    - name: 1. Tai Node Exporter ve Client
+    - name: 1. Tai goi Node Exporter tu GitHub
       get_url:
         url: https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
         dest: /tmp/node_exporter.tar.gz
 
-    - name: 2. Giai nen file
+    - name: 2. Giai nen goi da tai
       unarchive:
         src: /tmp/node_exporter.tar.gz
         dest: /opt/
@@ -16,18 +16,27 @@
 
     - name: 3. Tao Service de Node Exporter tu chay khi khoi dong
       copy:
+        dest: /etc/systemd/system/node_exporter.service
         content: |
           [Unit]
           Description=Node Exporter
+          After=network.target
+
           [Service]
+          User=root
           ExecStart=/opt/node_exporter-1.7.0.linux-amd64/node_exporter
-          Restart=always
+
           [Install]
           WantedBy=multi-user.target
-        dest: /etc/systemd/system/node_exporter.service
 
-    - name: 4. Khoi chay dich vu
+    - name: 4. Khoi dong va kich hoat Node Exporter
       systemd:
         name: node_exporter
         state: started
         enabled: yes
+        daemon_reload: yes
+
+    - name: 5. Kiem tra trang thai Port 9100
+      wait_for:
+        port: 9100
+        timeout: 5
